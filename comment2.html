@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comment Slider</title>
+    <style>
+        body {
+            align-items: center;
+            background: #E3E3E3;
+            display: flex;
+            height: 300vh;
+            justify-content: center;
+        }
+
+        @keyframes scroll {
+            0% { transform: translateX(calc(-250px * 7)); }
+            100% { transform: translateX(0); }
+        }
+
+        .slider {
+            background: white;
+            background-size: 500px;
+            box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125);
+            height: 120px;
+            margin: auto;
+            overflow: hidden;
+            position: relative;
+            width: 960px;
+        }
+
+        .slider::before,
+        .slider::after {
+            content: "";
+            height: 400px;
+            position: absolute;
+            width: 200px;
+            z-index: 2;
+            background: linear-gradient(to left, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+        }
+
+        .slider::after {
+            left: 0;
+            top: 0;
+            transform: rotateZ(180deg);
+        }
+
+        .slider::before {
+            right: 0;
+            top: 0;
+        }
+
+        .slide-track {
+            animation: scroll 40s linear infinite;
+            display: flex;
+            width: calc(250px * 14);
+        }
+
+        .slide {
+            height: 500px;
+            width: 550px;
+        }
+    </style>
+</head>
+<body>
+    <div class="slider">
+        <div class="slide-track">
+            <div class="slide">
+                <img src="img/review-1.png" alt="Review 1" />
+            </div>
+            <div class="slide">
+                <img src="img/review-2.png" alt="Review 2" />
+            </div>
+            <div class="slide">
+                <img src="img/review-3.png" alt="Review 3" />
+            </div>
+            <div class="slide">
+                <img src="img/review-4.png" alt="Review 4" />
+            </div>
+            <div class="slide">
+                <img src="img/review-5.png" alt="Review 5" />
+            </div>
+            <!-- Duplicating the slides for a seamless loop -->
+            <div class="slide">
+                <img src="img/review-1.png" alt="Review 1" />
+            </div>
+            <div class="slide">
+                <img src="img/review-2.png" alt="Review 2" />
+            </div>
+            <div class="slide">
+                <img src="img/review-3.png" alt="Review 3" />
+            </div>
+            <div class="slide">
+                <img src="img/review-4.png" alt="Review 4" />
+            </div>
+            <div class="slide">
+                <img src="img/review-5.png" alt="Review 5" />
+            </div>
+        </div>
+    </div>
+</body>
+</html>
