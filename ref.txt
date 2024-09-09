@@ -1,0 +1,330 @@
+ <section>
+         <div class="barnda-area pb-55">
+            <div class="container">
+               <div class="row mb-4">
+                  <div class="col-lg-12">
+                     <div class="brand-content mb-10 text-center">
+                        <h3 class="brand-title  bg-white">Trusted & loved by everyone..</h3>
+                        
+                     </div>
+                  </div>
+               </div>
+               <div class="row">
+                  <div class="col-lg-12">
+                     <div class="marquee-slider-right  iconic-slider-right">
+                        <div class="mb-3 marquee-iconic-box">
+                           <div class="image">
+                              <img src="img/review-1.png" alt="Member">
+                           </div>
+                        </div>
+                        <div class="mb-3 marquee-iconic-box">
+                           <div class="image">
+                              <img src="img/review-2.png" alt="Member">
+                           </div>
+                        </div>
+                        <div class="mb-3 marquee-iconic-box">
+                           <div class="image">
+                              <img src="img/review-3.png" alt="Member">
+                           </div>
+                        </div>
+                        <div class="mb-3 marquee-iconic-box">
+                           <div class="image">
+                              <img src="img/review-4.png" alt="Member">
+                           </div>
+                        </div>
+                     </div>
+                     <div class="marquee-slider-left  iconic-slider-right" dir="rtl" >
+                        <div class="marquee-iconic-box">
+                           <div class="image">
+                              <img src="img/review-5.png" alt="Member">
+                           </div>
+                        </div>
+                        <div class="marquee-iconic-box">
+                           <div class="image">
+                              <img src="img/review-1.png" alt="Member">
+                           </div>
+                        </div>
+                        <div class="marquee-iconic-box">
+                           <div class="image">
+                              <img src="/img/review-4.png" alt="Member">
+                           </div>
+                        </div>
+                        <div class="marquee-iconic-box">
+                           <div class="image">
+                              <img src="img/review-2.png" alt="Member">
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <section>
+         <div class="barnda-area ">
+            <div class="container">
+               <div class="row">
+                  <div class="col-lg-12">
+                     <div class="brand-content mb-10 text-center">
+                        <h3 class="brand-title  bg-white">We're Trusted by More Than 1000 Brands Globally</h3>
+                     </div>
+                  </div>
+               </div>
+               <div class="row">
+                  <div class="col-lg-12">
+                     <div class="barnd-5 tpbrand-active-5" >
+                        <div class="brand-5-item">
+                           <img src="img/brand-1.webp" alt="" width="150" loading="eager">
+                        </div>
+                        <div class="brand-5-item">
+                           <img src="img/brand-2.webp" alt="" width="150" loading="eager">
+                        </div>
+                        <div class="brand-5-item">
+                           <img src="img/brand-3.webp" alt="" width="150" loading="eager">
+                        </div>
+                        <div class="brand-5-item">
+                           <img src="img/brand-4.webp" alt="" width="150" loading="eager">
+                        </div>
+                        <div class="brand-5-item">
+                           <img src="img/brand-5.webp" alt="" width="150" loading="eager">
+                        </div>
+                        <div class="brand-5-item">
+                           <img src="img/brand-6.webp" alt="" width="150" loading="eager">
+                        </div>
+                        <div class="brand-5-item">
+                           <img src="img/brand_7.webp" alt="" width="150" loading="eager">
+                        </div>
+                        <div class="brand-5-item">
+                           <img src="img/brand_8.webp" alt="" width="150" loading="eager">
+                        </div>
+                        <div class="brand-5-item">
+                           <img src="img/brand_9.webp" alt="" width="150" loading="eager">
+                        </div>
+                        <div class="brand-5-item">
+                           <img src="img/brand_10.webp" alt="" width="150" loading="eager">
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- banner-area-end -->
+      <section id="features" class="toolest-area  bg-light-blue pt-50 pb-100">
+         <div class="container">
+            <div class="row">
+               <div class="col-lg-12 text-center mb-20">
+
+               </div>
+               <div class="col-lg-12">
+                  <div class="section-3 text-center mb-70">
+                     <div class="section-inner-title mb-15 mx-lg-5 mx-2">Discover Why Marketers Everywhere Are Choosing
+                        UTMLink.io for Link Management</div>
+                  </div>
+               </div>
+            </div>
+            <div class="row align-items-center ">
+               <div class="col-lg-6">
+                  <div class="tp-gradient-tab-details  tab-content services-tab-anim" id="v-pills-tabContent">
+                     <div class="tab-pane fade show active" id="v-pills-profile" role="tabpanel"
+                        aria-labelledby="v-pills-profile-tab" tabindex="0">
+                        <div class="toolest-thumb p-relative">
+                           <img src="img/gif/analytics_sm.gif" alt="" class="gif_img"
+                              loading="lazy">
+                           <div class="toolest-three-shape">
+                              <!-- <div class="toolest-shape-four d-none d-lg-block">
+                                 <img src="/static/landing_page/assets/img/icons/overlay.webp" alt="" loading="lazy">
+                              </div> -->
+                              <div class="toolest-shape-five d-none d-lg-block">
+                                 <img src="img/icons/dots.webp" alt="" loading="lazy">
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="tab-pane fade" id="v-shortlink" role="tabpanel" aria-labelledby="v-shortlink-tab"
+                        tabindex="0">
+                        <div class="toolest-thumb p-relative">
+                           <img src="img/gif/short_link_sm.gif" alt="" class="gif_img"
+                              loading="lazy">
+                           <div class="toolest-three-shape">
+                              <!-- <div class="toolest-shape-four d-none d-lg-block">
+                                 <img src="/static/landing_page/assets/img/icons/overlay.webp" alt="" loading="lazy">
+                              </div> -->
+                              <div class="toolest-shape-five d-none d-lg-block">
+                                 <img src="img/icons/dots.webp" alt="" loading="lazy">
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="tab-pane fade" id="v-utm" role="tabpanel" aria-labelledby="v-utm-tab" tabindex="0">
+                        <div class="toolest-thumb p-relative">
+                           <img src="img/gif/utm_link_sm.gif" alt="" class="gif_img"
+                              loading="lazy">
+                           <div class="toolest-three-shape">
+                              <!-- <div class="toolest-shape-four d-none d-lg-block">
+                                 <img src="/static/landing_page/assets/img/icons/overlay.webp" alt="" loading="lazy">
+                              </div> -->
+                              <div class="toolest-shape-five d-none d-lg-block">
+                                 <img src="img/icons/dots.webp" alt="" loading="lazy">
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="tab-pane fade" id="v-qr" role="tabpanel" aria-labelledby="v-qr-tab" tabindex="0">
+                        <div class="toolest-thumb p-relative">
+                           <img src="img/gif/qr_gen_sm.gif" alt="" class="gif_img"
+                              loading="lazy">
+                           <div class="toolest-three-shape">
+                              <!-- <div class="toolest-shape-four d-none d-lg-block">
+                                 <img src="/static/landing_page/assets/img/icons/overlay.webp" alt="" loading="lazy">
+                              </div> -->
+                              <div class="toolest-shape-five d-none d-lg-block">
+                                 <img src="img/icons/dots.webp" alt="" loading="lazy">
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="tab-pane fade" id="v-user" role="tabpanel" aria-labelledby="v-user-tab" tabindex="0">
+                        <div class="toolest-thumb p-relative">
+                           <img src="img/gif/invite_user_sm.gif" alt="" class="gif_img"
+                              loading="lazy">
+                           <div class="toolest-three-shape">
+                              <!-- <div class="toolest-shape-four d-none d-lg-block">
+                                 <img src="/static/landing_page/assets/img/icons/overlay.webp" alt="" loading="lazy">
+                              </div> -->
+                              <div class="toolest-shape-five d-none d-lg-block">
+                                 <img src="img/icons/dots.webp" alt="" loading="lazy">
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+
+               </div>
+               <div class="col-lg-5 offset-lg-1">
+                  <div class="nav flex-column tp-gradient-tab-btn nav-pills me-3" id="v-pills-tab" role="tablist"
+                     aria-orientation="vertical">
+                     <div class="nav-link active" id="v-pills-profile-tab" data-bs-toggle="pill"
+                        data-bs-target="#v-pills-profile" role="tab" aria-controls="v-pills-profile"
+                        aria-selected="false">
+                        <div class="tp-accordion-item tp-accordion-item-2">
+                           <div class="tp-accordion-head">
+                              <div class="tp-accordion-icon p-relative">
+                                 <img src="img/icons/line.svg" alt="" class="icon-img"
+                                    loading="lazy">
+                                 <div class="tp-accordion-icon-shape">
+                                    <img src="img/icons/shape-2.webp" alt=""
+                                       loading="lazy">
+                                 </div>
+                                 <span></span>
+                              </div>
+                              <div class="tp-accordion-title pl-30">
+                                 <h4 class="tp-toolest-title-info">In Depth Analytics</h4>
+                              </div>
+                           </div>
+                           <div class="tp-accordion-progress">
+                              <div class="tp-accordion-progress-dark p-relative">
+                                 <div class="tp-accordion-progress-active"></div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="nav-link" id="v-shortlink-tab" data-bs-toggle="pill" data-bs-target="#v-shortlink"
+                        role="tab" aria-controls="v-shortlink" aria-selected="false">
+                        <div class="tp-accordion-item tp-accordion-item-3">
+                           <div class="tp-accordion-head">
+                              <div class="tp-accordion-icon p-relative">
+                                 <img src="img/icons/short-link.svg" alt=""
+                                    class="icon-img" loading="lazy">
+                                 <div class="tp-accordion-icon-shape">
+                                    <img src="img/icons/shape-3.webp" alt=""
+                                       loading="lazy">
+                                 </div>
+                                 <span></span>
+                              </div>
+                              <div class="tp-accordion-title pl-30">
+                                 <h4 class="tp-toolest-title-info">Branded Shortlinks</h4>
+                              </div>
+                           </div>
+                           <div class="tp-accordion-progress">
+                              <div class="tp-accordion-progress-dark p-relative">
+                                 <div class="tp-accordion-progress-active"></div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="nav-link" id="v-utm-tab" data-bs-toggle="pill" data-bs-target="#v-utm" role="tab"
+                        aria-controls="v-utm" aria-selected="false">
+                        <div class="tp-accordion-item tp-accordion-item-4">
+                           <div class="tp-accordion-head">
+                              <div class="tp-accordion-icon p-relative">
+                                 <img src="img/icons/link.svg" alt="" loading="lazy">
+                                 <div class="tp-accordion-icon-shape">
+                                    <img src="img/icons/shape-4.webp" alt=""
+                                       loading="lazy">
+                                 </div>
+                                 <span></span>
+                              </div>
+                              <div class="tp-accordion-title pl-30">
+                                 <h4 class="tp-toolest-title-info">UTM Link Generator</h4>
+                              </div>
+                           </div>
+                           <div class="tp-accordion-progress">
+                              <div class="tp-accordion-progress-dark p-relative">
+                                 <div class="tp-accordion-progress-active"></div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="nav-link" id="v-qr-tab" data-bs-toggle="pill" data-bs-target="#v-qr" role="tab"
+                        aria-controls="v-qr" aria-selected="false">
+                        <div class="tp-accordion-item tp-accordion-item-1">
+                           <div class="tp-accordion-head">
+                              <div class="tp-accordion-icon p-relative">
+                                 <img src="img/icons/qr.svg" alt="" class="icon-img"
+                                    loading="lazy">
+                                 <div class="tp-accordion-icon-shape">
+                                    <img src="img/icons/shape-1.webp" alt=""
+                                       loading="lazy">
+                                 </div>
+                                 <span></span>
+                              </div>
+                              <div class="tp-accordion-title pl-30">
+                                 <h4 class="tp-toolest-title-info">QR Code Generator</h4>
+                              </div>
+                           </div>
+                           <div class="tp-accordion-progress">
+                              <div class="tp-accordion-progress-dark p-relative">
+                                 <div class="tp-accordion-progress-active"></div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="nav-link" id="v-user-tab" data-bs-toggle="pill" data-bs-target="#v-user" role="tab"
+                        aria-controls="v-user" aria-selected="false">
+                        <div class="tp-accordion-item tp-accordion-item-2">
+                           <div class="tp-accordion-head">
+                              <div class="tp-accordion-icon p-relative">
+                                 <img src="img/icons/user.svg" alt="" loading="lazy">
+                                 <div class="tp-accordion-icon-shape">
+                                    <img src="img/icons/shape-2.webp" alt=""
+                                       loading="lazy">
+                                 </div>
+                                 <span></span>
+                              </div>
+                              <div class="tp-accordion-title pl-30">
+                                 <h4 class="tp-toolest-title-info">Multi-User Access</h4>
+                              </div>
+                           </div>
+                           <div class="tp-accordion-progress">
+                              <div class="tp-accordion-progress-dark p-relative">
+                                 <div class="tp-accordion-progress-active"></div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>

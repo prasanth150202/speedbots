@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comment Slider</title>
+    <style>
+        body {
+            align-items: center;
+            background: #E3E3E3;
+            display: flex;
+            height: 300vh;
+            justify-content: center;
+        }
+
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(calc(-250px * 7)); }
+        }
+
+        .slider {
+            background: white;
+            background-size: 500PX;
+            box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125);
+            height: 120px;
+            margin: auto;
+            overflow: hidden;
+            position: relative;
+            width: 960px;
+        }
+
+        .slider::before,
+        .slider::after {
+            content: "";
+            height: 400px;
+            position: absolute;
+            width: 200px;
+            z-index: 2;
+            background: linear-gradient(to right, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+        }
+
+        .slider::after {
+            right: 0;
+            top: 0;
+            transform: rotateZ(180deg);
+        }
+
+        .slider::before {
+            left: 0;
+            top: 0;
+        }
+
+        .slide-track {
+            animation: scroll 40s linear infinite;
+            display: flex;
+            width: calc(250px * 14);
+        }
+
+        .slide {
+            height: 500px;
+            width: 550px;
+        }
+    </style>
+</head>
+<body>
+    <div class="slider">
+        <div class="slide-track">
+            <div class="slide">
+                <img src="img/review-1.png"  alt="Review 1" />
+            </div>
+            <div class="slide">
+                <img src="img/review-2.png"  alt="Review 2" />
+            </div>
+            <div class="slide">
+                <img src="img/review-3.png"  alt="Review 3" />
+            </div>
+            <div class="slide">
+                <img src="img/review-4.png"  alt="Review 4" />
+            </div>
+            <div class="slide">
+                <img src="img/review-5 (1).png"  alt="Review 5" />
+            </div>
+            <!-- Duplicating the slides for a seamless loop -->
+            <div class="slide">
+                <img src="img/review-1.png"  alt="Review 1" />
+            </div>
+            <div class="slide">
+                <img src="img/review-2.png"  alt="Review 2" />
+            </div>
+            <div class="slide">
+                <img src="img/review-3.png"  alt="Review 3" />
+            </div>
+            <div class="slide">
+                <img src="img/review-4.png"  alt="Review 4" />
+            </div>
+            <div class="slide">
+                <img src="img/review-5.png"  alt="Review 5" />
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+ <!-- testimonial-area-start
+      <!--  -->
+               <!-- <div class="col-lg-6">
+                  <div class="tp-testimonial-4 pb-60">
+                     <div class="testimonial-4-wrap mb-40 pl-70">
+                        <div class="section-wrapper mb-20">
+                           <span>Testimonials</span>
+                           <h5 class="section-title-4 section-title-4-2">What people say about Us</h5>
+                        </div>
+                        <div class="testimonial-4-wrapper tptestimonial-4-active ">
+                           <div class="tptestimonial-4-item">
+                              <div class="tptestimonial-4-rating d-flex align-items-center mb-25">
+                                 <div class="review-star">
+                                    <i class="fa-sharp fa-solid fa-star-sharp"></i>
+                                    <i class="fa-sharp fa-solid fa-star-sharp"></i>
+                                    <i class="fa-sharp fa-solid fa-star-sharp"></i>
+                                    <i class="fa-sharp fa-solid fa-star-sharp"></i>
+                                    <i class="fa-sharp fa-solid fa-star-sharp"></i>
+                                 </div>
+                              </div>
+                              <div class="tptestimonial-4-content d-flex">
+                                 <div class="tptestimonial-4-icon mr-20">
+                                    <img src="img/shape/quation-4.webp" alt=""
+                                       loading="lazy">
+                                 </div>
+                                 <div class="tptestimonial-4-text">
+                                    <p>
+                                       I’ll definitely recommend
+                                       UTMLink.io to digital marketers & entrepreneurs. As a digital marketing
+                                       agency it's crucial to gather data/insights on every campaign, this is a great
+                                       tool for
+                                       creating and managing UTM Links.
+                                    </p>
+                                    <div class="tptestimonial-4-author">
+                                       <h4 class="title">Alan Fischer</h4>
+                                       <span>Marketing Director, Real Estate</span>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="tptestimonial-4-item">
+                              <div class="tptestimonial-4-rating d-flex align-items-center mb-25">
+                                 <div class="review-star">
+                                    <i class="fa-sharp fa-solid fa-star-sharp"></i>
+                                    <i class="fa-sharp fa-solid fa-star-sharp"></i>
+                                    <i class="fa-sharp fa-solid fa-star-sharp"></i>
+                                    <i class="fa-sharp fa-solid fa-star-sharp"></i>
+                                    <i class="fa-sharp fa-solid fa-star-sharp"></i>
+                                 </div>
+                              </div>
+                              <div class="tptestimonial-4-content d-flex">
+                                 <div class="tptestimonial-4-icon mr-20">
+                                    <img src="img/shape/quation-4.webp" alt=""
+                                       loading="lazy">
+                                 </div>
+                                 <div class="tptestimonial-4-text">
+                                    <p>
+                                       I really like that
+                                       UTMLink.io saves my links in a history that I can reference later. I
+                                       feel like with Google they are lost forever once I make one.
+                                    </p>
+                                    <div class="tptestimonial-4-author">
+                                       <h4 class="title">Emery Boone</h4>
+                                       <span>Head of CX, B2B SaaS</span>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="tptestimonial-4-item">
+                              <div class="tptestimonial-4-rating d-flex align-items-center mb-25">
+                                 <div class="review-star">
+                                    <i class="fa-sharp fa-solid fa-star-sharp"></i>
+                                    <i class="fa-sharp fa-solid fa-star-sharp"></i>
+                                    <i class="fa-sharp fa-solid fa-star-sharp"></i>
+                                    <i class="fa-sharp fa-solid fa-star-sharp"></i>
+                                    <i class="fa-sharp fa-solid fa-star-sharp"></i>
+                                 </div>
+                              </div>
+                              <div class="tptestimonial-4-content d-flex">
+                                 <div class="tptestimonial-4-icon mr-20">
+                                    <img src="img/shape/quation-4.webp" alt=""
+                                       loading="lazy">
+                                 </div>
+                                 <div class="tptestimonial-4-text">
+                                    <p>
+                                       Extremely useful for folks who are looking for a simple interface
+                                       to create and manage tracking tags, or who don't currently use utm tagging and
+                                       need a
+                                       tool to get started
+                                    </p>
+                                    <div class="tptestimonial-4-author">
+                                       <h4 class="title">Wesley Gatescher</h4>
+                                       <span>CEO, Marketing analytics Agency</span>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="tptestimonial-4-item">
+                              <div class="tptestimonial-4-rating d-flex align-items-center mb-25">
+                                 <div class="review-star">
+                                    <i class="fa-sharp fa-solid fa-star-sharp"></i>
+                                    <i class="fa-sharp fa-solid fa-star-sharp"></i>
+                                    <i class="fa-sharp fa-solid fa-star-sharp"></i>
+                                    <i class="fa-sharp fa-solid fa-star-sharp"></i>
+                                    <i class="fa-sharp fa-solid fa-star-sharp"></i>
+                                 </div>
+                              </div>
+                              <div class="tptestimonial-4-content d-flex">
+                                 <div class="tptestimonial-4-icon mr-20">
+                                    <img src="img/shape/quation-4.webp" alt=""
+                                       loading="lazy">
+                                 </div>
+                                 <div class="tptestimonial-4-text">
+                                    <p>
+                                       Bows down</span> I am sending this to every
+                                       media agency - I literally able to track the performance of my submissions in SEO
+                                       because of organized UTM tracking links...
+                                    </p>
+                                    <div class="tptestimonial-4-author">
+                                       <h4 class="title">Ruth Fernandez</h4>
+                                       <span>Founder, Media Agency</span>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="tptestimonial-4-item">
+                              <div class="tptestimonial-4-rating d-flex align-items-center mb-25">
+                                 <div class="review-star">
+                                    <i class="fa-sharp fa-solid fa-star-sharp"></i>
+                                    <i class="fa-sharp fa-solid fa-star-sharp"></i>
+                                    <i class="fa-sharp fa-solid fa-star-sharp"></i>
+                                    <i class="fa-sharp fa-solid fa-star-sharp"></i>
+                                    <i class="fa-sharp fa-solid fa-star-sharp"></i>
+                                 </div>
+                              </div>
+                              <div class="tptestimonial-4-content d-flex">
+                                 <div class="tptestimonial-4-icon mr-20">
+                                    <img src="img/shape/quation-4.webp" alt=""
+                                       loading="lazy">
+                                 </div>
+                                 <div class="tptestimonial-4-text">
+                                    <p>
+                                       UTMLink.io has been a useful business tool for us to quickly and easily setup and
+                                       identify the
+                                       success of various campaigns. It saves us time and ensures we are appropriately
+                                       tracking
+                                       all digital channel
+                                    </p>
+                                    <div class="tptestimonial-4-author">
+                                       <h4 class="title">Roderick Scott</h4>
+                                       <span>Managing Director, B2C Subscription Firm</span>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="tptestimonial-4-item">
+                              <div class="tptestimonial-4-rating d-flex align-items-center mb-25">
+                                 <div class="review-star">
+                                    <i class="fa-sharp fa-solid fa-star-sharp"></i>
+                                    <i class="fa-sharp fa-solid fa-star-sharp"></i>
+                                    <i class="fa-sharp fa-solid fa-star-sharp"></i>
+                                    <i class="fa-sharp fa-solid fa-star-sharp"></i>
+                                    <i class="fa-sharp fa-solid fa-star-sharp"></i>
+                                 </div>
+                              </div>
+                              <div class="tptestimonial-4-content d-flex">
+                                 <div class="tptestimonial-4-icon mr-20">
+                                    <img src="img/shape/quation-4.webp" alt=""
+                                       loading="lazy">
+                                 </div>
+                                 <div class="tptestimonial-4-text">
+                                    <p>
+                                       Advanced analytics tools are the core driver for your campaigns
+                                       and to better measure its performance
+                                    </p>
+                                    <div class="tptestimonial-4-author">
+                                       <h4 class="title">Jake Geller</h4>
+                                       <span>SaaS Enthusiast</span>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="tptestimonial-4-item">
+                              <div class="tptestimonial-4-rating d-flex align-items-center mb-25">
+                                 <div class="review-star">
+                                    <i class="fa-sharp fa-solid fa-star-sharp"></i>
+                                    <i class="fa-sharp fa-solid fa-star-sharp"></i>
+                                    <i class="fa-sharp fa-solid fa-star-sharp"></i>
+                                    <i class="fa-sharp fa-solid fa-star-sharp"></i>
+                                    <i class="fa-sharp fa-solid fa-star-sharp"></i>
+                                 </div>
+                              </div>
+                              <div class="tptestimonial-4-content d-flex">
+                                 <div class="tptestimonial-4-icon mr-20">
+                                    <img src="img/shape/quation-4.webp" alt=""
+                                       loading="lazy">
+                                 </div>
+                                 <div class="tptestimonial-4-text">
+                                    <p>
+                                       Never knew UTM links were of this importance in campaigns. Custom
+                                       URL shorteners with branded URLs are important
+                                    </p>
+                                    <div class="tptestimonial-4-author">
+                                       <h4 class="title">Chahat Raj Kapoor</h4>
+                                       <span>Social Media Marketer</span>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="tptestimonial-4-item">
+                              <div class="tptestimonial-4-rating d-flex align-items-center mb-25">
+                                 <div class="review-star">
+                                    <i class="fa-sharp fa-solid fa-star-sharp"></i>
+                                    <i class="fa-sharp fa-solid fa-star-sharp"></i>
+                                    <i class="fa-sharp fa-solid fa-star-sharp"></i>
+                                    <i class="fa-sharp fa-solid fa-star-sharp"></i>
+                                    <i class="fa-sharp fa-solid fa-star-sharp"></i>
+                                 </div>
+                              </div>
+                              <div class="tptestimonial-4-content d-flex">
+                                 <div class="tptestimonial-4-icon mr-20">
+                                    <img src="img/shape/quation-4.webp" alt=""
+                                       loading="lazy">
+                                 </div>
+                                 <div class="tptestimonial-4-text">
+                                    <p>
+                                       Meet
+                                       UTMLink.io: Redefine digital marketing with powerful analytics tools
+                                       for a customer-centric experience
+                                    </p>
+                                    <div class="tptestimonial-4-author">
+                                       <h4 class="title">Christian Herrero</h4>
+                                       <span>Founder, CyMEnergy</span>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="testimonial-arrow-4 pl-110">
+                        <div class="tptestimonal-4-nav p-relative">
+                           <button class="prv-testi-case">
+                              <span>
+                                 <svg xmlns="http://www.w3.org/2000/svg" width="8" height="14" fill="none"
+                                    viewBox="0 0 8 14">
+                                    <path fill-rule="evenodd"
+                                       d="M7.707.293a1 1 0 0 1 0 1.414L2.414 7l5.293 5.293a1 1 0 0 1-1.414 1.414l-6-6a1 1 0 0 1 0-1.414l6-6a1 1 0 0 1 1.414 0z"
+                                       fill="currentColor"></path>
+                                 </svg>
+                              </span>
+                           </button>
+                           <button class="next-testi-case">
+                              <span>
+                                 <svg xmlns="http://www.w3.org/2000/svg" width="8" height="14" fill="none"
+                                    viewBox="0 0 8 14">
+                                    <path fill-rule="evenodd"
+                                       d="M.293 13.707a1 1 0 0 1 0-1.414L5.586 7 .293 1.707A1 1 0 1 1 1.707.293l6 6a1 1 0 0 1 0 1.414l-6 6a1 1 0 0 1-1.414 0z"
+                                       fill="currentColor"></path>
+                                 </svg>
+                              </span>
+                           </button>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div> -->
+      <!-- </section>  -->

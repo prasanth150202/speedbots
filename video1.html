@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    .text-container {
+      background-color: red;
+      color: white;
+      padding: 20px;
+      margin: 20px 0;
+      font-size: 18px;
+      text-align: center;
+    }
+
+    video {
+      width: 80%;
+      height: auto;
+      display: block;
+      margin: 0 auto 20px;
+    }
+  </style>
+  <title>Auto Play Videos</title>
+</head>
+<body>
+
+  <div class="text-container">Text Container 1</div>
+  <video id="video1" muted>
+    <source src="video1.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <div class="text-container">Text Container 2</div>
+  <video id="video2" muted>
+    <source src="video2.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <div class="text-container">Text Container 3</div>
+  <video id="video3" muted>
+    <source src="video3.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <div class="text-container">Text Container 4</div>
+  <video id="video4" muted>
+    <source src="video4.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <script>
+    // Video elements
+    const videos = [
+      document.getElementById('video1'),
+      document.getElementById('video2'),
+      document.getElementById('video3'),
+      document.getElementById('video4')
+    ];
+
+    // Play videos sequentially
+    let currentVideoIndex = 0;
+
+    function playNextVideo() {
+      if (currentVideoIndex < videos.length) {
+        const currentVideo = videos[currentVideoIndex];
+        currentVideo.play();
+        
+        // Listen for the end of the current video
+        currentVideo.onended = function() {
+          currentVideoIndex++;
+          playNextVideo();
+        };
+      }
+    }
+
+    // Ensure videos can play on mobile
+    document.addEventListener('DOMContentLoaded', function() {
+      const firstVideo = videos[0];
+      firstVideo.play();
+    });
+    
+    // Start the first video
+    playNextVideo();
+  </script>
+
+</body>
+</html>

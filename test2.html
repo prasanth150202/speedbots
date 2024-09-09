@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book A Consultation</title>
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+        }
+        .content1 {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        .imgcon {
+            text-align: center;
+        }
+        .popup-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        .popup-text {
+            margin-top: 20px;
+        }
+        .form-label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .form-control {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+        }
+        .dropdown-container {
+            position: relative;
+        }
+        .dropdown {
+            position: relative;
+        }
+        .dropdown-input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .dropdown-select {
+            display: none;
+            position: absolute;
+            top: 100%;
+            width: 100%;
+            max-height: 200px;
+            overflow-y: auto;
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            z-index: 1;
+        }
+        .dropdown-option {
+            padding: 10px;
+            cursor: pointer;
+            border-bottom: 1px solid #ddd;
+        }
+        .dropdown-option:hover {
+            background-color: #f1f1f1;
+        }
+        .error-message {
+            color: red;
+            display: none;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        #form-error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="popup-box" class="modal">    
+        <div class="content1">
+            <div class="imgcon">
+                <img src="img/employees-working-together-medium-shot.jpg" alt="Popup Image" class="popup-image">
+            </div>
+            <div class="popup-text">
+                <h1>Book A Consultation</h1>
+                <p></p>
+                <a href="#" class="close-button">&times;</a>    
+    
+                <form class="row g-3 needs-validation" method="post" id="popup-form" novalidate>
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text" id="name" class="form-control" placeholder="Enter Your Name" name="Name" required>
+                    <span class="error-message" id="name-error">Please enter your name.</span>
+    
+                    <label class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" placeholder="Enter Your Email" name="Email Address" required>
+                    <span class="error-message" id="email-error">Please enter a valid email address.</span>
+    
+                    <label class="form-label">Phone Number</label>
+                    <input type="tel" class="form-control" placeholder="Enter Your Phone Number" name="Mobile" id="phone" minlength="10" maxlength="10" required>
+                    <span class="error-message" id="phone-error">Please enter a valid phone number with 10 digits.</span>
+    
+                    <label class="form-label">Message</label>
+                    <input type="text" id="message" class="form-control" placeholder="Message" name="message" required>
+                    <span class="error-message" id="message-error">Please enter a message.</span>
+    
+                    <button type="submit" value="Submit" id="submitButton" data-mdb-ripple-init>Submit form</button>
+                </form>
+            </div>
+        </div>
+    </div>
+        
+    <script>
+     document.addEventListener('DOMContentLoaded', () => {
+    'use strict';
+
+    const forms = document.querySelectorAll('.needs-validation');
+    forms.forEach((form) => {
+        form.addEventListener('submit', async (event) => {
+            event.preventDefault();
+            event.stopPropagation();
+
+            let isValid = true;
+
+            // Clear previous error messages
+            document.querySelectorAll('.error-message').forEach(msg => msg.style.display = 'none');
+
+            // Check validity of each field
+            const name = document.getElementById('name');
+            if (!name.value) {
+                document.getElementById('name-error').style.display = 'block';
+                isValid = false;
+            }
+
+            const email = document.getElementById('email');
+            if (!email.validity.valid) {
+                document.getElementById('email-error').style.display = 'block';
+                isValid = false;
+            }
+
+            const phone = document.getElementById('phone');
+            if (!phone.value || phone.value.length !== 10) {
+                document.getElementById('phone-error').style.display = 'block';
+                isValid = false;
+            }
+
+            const message = document.getElementById('message');
+            if (!message.value) {
+                document.getElementById('message-error').style.display = 'block';
+                isValid = false;
+            }
+
+            if (!isValid) {
+                form.classList.add('was-validated');
+                return;
+            }
+
+            document.getElementById('popup-box').style.display = 'none';
+            document.getElementById('submitButton').disabled = true;
+            const formData = new FormData(event.target);
+
+            try {
+                const response = await fetch("https://script.google.com/macros/s/AKfycbw9i0rWo8iavAXTM1ItKqYW0yMdfHDTRrxYyquwlVTpYTfLxMLa_120yndn_KC6txzv/exec", { 
+                    method: 'POST', 
+                    body: formData 
+                });
+                const data = await response.json();
+
+                document.getElementById('submitButton').disabled = false;
+                if (data.result === "success") {
+                    form.reset();
+                    window.location.href = 'thankyou.html';
+                } else {
+                    document.querySelector('.modal-backdrop').classList.remove('show');
+                    setTimeout(() => {
+                        window.location.reload();
+                    }, 2500);
+                }
+            } catch (error) {
+                document.getElementById('submitButton').disabled = false;
+                form.reset();
+                alert('An error occurred: ' + error.message);
+            }
+        }, false);
+    });
+});
+
+        </script>
+
+
+
+</body>
+</html>
