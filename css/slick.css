@@ -1,3 +1,115 @@
+body{
+  overflow-x: hidden; /* Hide horizontal scrollbar */
+}
+.header1{
+    position: sticky;
+    top: 0;
+    
+    background-color: white;
+    z-index: 10000; height: 170px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+
+.demo1{
+    text-align: center;
+    overflow:hidden;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Container div styling */
+/* Container div styling */
+.iframe-container {
+  width: 100%;
+  max-width: 100%; /* Ensure the container does not exceed viewport width */
+  height: 700px; /* Let height adjust based on content */
+  max-height: 80vh; /* Maximum height of the container */
+  margin: 20px auto; /* Center the container horizontally with margin */
+  padding: 0; /* Remove padding to minimize space usage */
+  
+ 
+  align-items: center; /* Center iframe vertically within the container */
+  justify-content: center; /* Center iframe horizontally within the container */
+}
+
+/* Iframe styling */
+.iframe-container iframe {
+  width: 100%;
+  height: 100%;
+   /* Fill the container dimensions */
+  max-width: 100%; /* Ensure iframe does not exceed container width */
+  max-height: 100%; /* Ensure iframe does not exceed container height */
+  border: none; /* Remove default border */
+  border-radius: 8px; /* Optional: Rounded corners */
+  overflow: hidden;
+}
+
+  
+  .video {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    color: #000;
+    background-color: #212121;
+    margin: 0;
+    padding: 0;
+  }
+
+  .unique-swiper-container {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .unique-swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 320px;
+    background-color: #fff;
+    overflow: hidden;
+    border-radius: 8px;
+  }
+
+  .unique-slide-picture {
+    width: 320px;
+    height: 320px;
+    overflow: hidden;
+  }
+
+  .unique-slide-picture video {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .unique-slide-detail {
+    padding: 25px 20px;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  .unique-slide-detail h3 {
+    margin: 0;
+    font-size: 20px;
+  }
+
+  .unique-slide-detail span {
+    display: block;
+    font-size: 16px;
+    color: #f44336;
+  }
+
+
+
+
 /* Additional styling for badges */
 
 
@@ -28,21 +140,36 @@
 }
 
 /* Mobile adjustments */
+/* Mobile adjustments */
 @media (max-width: 768px) {
-    .text-md-left {
-        text-align: center !important; /* Center-align the logo on mobile */
+    .tpheader__right {
+        display: flex;
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center horizontally */
+        gap: 10px; /* Space between buttons */
+        position: absolute; /* Position it absolutely */
+        bottom: 0; /* Adjust as needed to keep away from bottom */
+        right: 10px; /* Adjust as needed to keep away from the right edge */
+        width: auto; /* Ensure buttons are not stretched */
     }
-    .d-md-block {
-        display: none; /* Hide menu on mobile */
-    }
-    .d-flex {
-        margin-top: 70px;
-       justify-content: center;
-       align-items: center;
-       right: 30px ;
 
+    .tpheader__btn {
+        margin: 0; /* Remove any margins */
+    }
+
+    .tpheader__btn a {
+        width: auto; /* Buttons will not stretch to full width */
+        text-align: center; /* Center text within buttons */
+        padding: 10px 20px; /* Adjust padding as needed */
+    }
+
+    /* Ensure logo has enough space */
+    .logo-class { /* Replace with your actual logo class */
+        margin-bottom: 70px; /* Adjust to ensure space above buttons */
     }
 }
+
+
 
     
 .container3 {
@@ -51,7 +178,20 @@
     display: flex;
    
     justify-content: center;
+
 }
+.logo-container {
+    background: linear-gradient(135deg, #e0e0e0, #bdbdbd); /* Light gray to dark gray gradient */
+    padding: 20px; /* Optional: Add padding */
+    border-radius: 10px; /* Optional: Add rounded corners */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
     @keyframes scroll3 {
     0% { transform: translateX(0); }
     100% { transform: translateX(calc(-250px * 7)); }
@@ -66,15 +206,21 @@
     position: relative;
     width: 100%;
 }
+.slider3 img{
+    
+        filter: grayscale(100%);
+      
+    
+}
 
 .slider3::before,
 .slider3::after {
     content: "";
     height: 125px;
     position: absolute;
-    width: 200px;
+    width: 90px;
     z-index: 2;
-    background: linear-gradient(to right, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+    
 }
 @media(max-width:768px){
     .slider3::before,
@@ -361,7 +507,7 @@ ul {
     padding: 0px;
 }
 .footer-section {
-  background: whitesmoke;
+  background: rgb(177, 202, 226);
     position: relative;
   
 }
@@ -543,11 +689,12 @@ ul {
 }
 .container4 {
 display: flex;
-justify-content: space-between;
+justify-content: center;
 align-items: flex-start;
 gap: 20px;
 margin: 20px;
 padding: 0 10%;
+overflow: hidden;
 }
 
 .video-container4 {
@@ -555,7 +702,7 @@ flex: 1;
 display: flex;
 justify-content: center;
 align-items: center;
-background-color: #f2f2f2;
+
 padding: 20px;
 border-radius: 10px;
 max-width: 700px;
@@ -563,9 +710,10 @@ min-height: 300px;
 }
 
 #video-player4 {
-width:200px;           /* Make the video width 100% of its container */
-height: auto;           /* Maintain aspect ratio */
-max-width: 600px;       /* Optional: Set a max width for the video */
+width:700px;           /* Make the video width 100% of its container */
+height: auto;      
+max-height: 700px;     /* Maintain aspect ratio */
+max-width: 700px;       /* Optional: Set a max width for the video */
 border: 2px solid #ddd; /* Add a border for styling */
 border-radius: 10px;    /* Add rounded corners */
 object-fit: cover;      /* Ensure the video fills the container without distortion */
@@ -578,7 +726,8 @@ align-items: flex-end;
 gap: 10px;
 flex: 0 1 200px;
 max-width: 250px;
-margin: 0;
+margin: 0 ;
+margin-top: 50px;
 
 }
 
@@ -628,32 +777,37 @@ outline: none;
     /* Media Queries for Mobile View */
     @media (max-width: 768px) {
         .container4 {
-            flex-direction: column;
-            align-items: center;
-            padding: 0 5%;
+            flex-direction: column; /* Stack elements vertically */
+            padding: 0 5%; /* Adjust padding to fit smaller screens */
+            gap: 10px; /* Reduce gap between items */
+            overflow-x: hidden; /* Prevent horizontal scrolling and unwanted gaps */
         }
-
+    
         .video-container4 {
-            max-width: 100%;
+            max-width: 80%;
+            width: 250px;
             min-height: 400px;
         }
-
+    
         .button-container4 {
             align-items: center;
             max-width: 100%;
             width: 100%;
         }
-
+    
         .btn4 {
             width: 100%;
             max-width: 300px;
             padding: 10px;
         }
+    
         #video-player4 {
             min-height: 400px;
         }
-
     }
+    
+
+    
 
 .sign-in-btn {
     display: inline-block;
@@ -674,7 +828,7 @@ outline: none;
 }
 
 
-.container3 {
+.container-3 {
     align-items: center;
     
     display: flex;
@@ -742,15 +896,37 @@ outline: none;
    
 }
 
+.slide33{
+    height: 100px;
+    width: 250px; 
+}
+.slider33::after {
+    right: 0;
+    top: 0;
+    transform: rotateZ(180deg);
+}
+
+.slider33::before {
+    left: 0;
+    top: 0;
+}
+
+.slide-track33 {
+    animation: scroll3 40s linear infinite;
+    display: flex;
+    width: calc(250px * 14);
+}
 
 .container-1 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
     
     height: auto ;/* Full viewport height */
     justify-content: center;
     gap: 20px; /* Space between sliders */
+    
 }
 
 @keyframes scroll-left {
@@ -761,6 +937,7 @@ outline: none;
 @keyframes scroll-right {
     0% { transform: translateX(calc(-250px * 7)); }
     100% { transform: translateX(0); }
+    
 }
 
 .slider {
@@ -965,3 +1142,14 @@ outline: none;
 .slick-arrow.slick-hidden {
     display: none;
 }
+@media (max-width: 768px) {
+    html, body {
+        overflow-x: hidden; /* Prevent horizontal scrolling */
+    }
+
+    .video-container4 {
+        width: 75%; /* Adjust width for mobile view */
+        margin: 0 auto; /* Center the video container */
+    }
+}
+

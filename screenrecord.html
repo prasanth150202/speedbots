@@ -1,0 +1,212 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swiper Slider with Navigation</title>
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+  
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    </link>
+    <style>
+      body{
+        overflow-y: hidden; /* Hide vertical scrollbar */
+        overflow-x: hidden; /* Hide horizontal scrollbar */
+      }
+
+      h1 {
+        font-weight: 700;
+        margin-bottom: 20px; /* Space between the heading and the slider */
+        text-align: center;
+        flex-direction: column; /* Align items in a column */
+      }
+      .videoconnt {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background-color: #ffffff;
+        margin: 0;
+        padding: 0;
+      
+
+      }
+
+      .swiper-container {
+        width: 100%;
+        max-width: 600px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+      }
+
+      .swiper-slide {
+        background-position: center;
+        background-size: cover;
+        width: 320px;
+        height: 240px;
+        overflow: hidden;
+        border-radius: 8px;
+        margin-bottom: 30px;
+      }
+
+      .unique-slide-picture {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+      }
+
+      .unique-slide-picture video {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .unique-slide-detail {
+        padding: 25px 20px;
+        font-weight: 600;
+        text-align: center;
+      }videos/
+
+      .swiper-button-next,
+      .swiper-button-prev {
+        color: #030303; /* Button color */
+        width: 27px; /* Button width */
+        height: 44px; /* Button height */
+        background-size: 27px 44px; /* Button background size */
+      }
+
+      .swiper-button-next::after,
+      .swiper-button-prev::after {
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+  
+  <div class="videoconnt"> 
+    <!-- Slider main container -->
+    <div class="swiper-container unique-swiper-container">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide unique-swiper-slide" style="width: 130%; height: 100%;">
+          <div class="unique-slide-picture">
+            <h1>Screen 1</h1>
+            <video id="video1" muted>
+              <source src="videos/screenvide.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          
+        </div>
+        
+        <div class="swiper-slide unique-swiper-slide" style="width: 130%; height: 100%;">
+          <div class="unique-slide-picture">
+            <h1>Screen 2</h1>
+            <video id="video2" muted>
+              <source src="videos/screenvideo.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          
+        </div>
+        
+        <div class="swiper-slide unique-swiper-slide" style="width: 130%; height: 100%;">
+          <div class="unique-slide-picture">
+            <h1>Screen 3</h1>
+            <video id="video3" muted>
+              <source src="videos/screenvideo4.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          
+        </div>
+        <div class="swiper-slide unique-swiper-slide" style="width: 130%; height: 100%;">
+          <div class="unique-slide-picture">
+            <h1>Screen 4</h1>
+            <video id="video3" muted>
+              <source src="videos/screenvideo5.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          
+        </div>
+        <div class="swiper-slide unique-swiper-slide" style="width: 130%; height: 100%;">
+          <div class="unique-slide-picture">
+            <h1>Screen 5</h1>
+            <video id="video3" muted>
+              <source src="img/Screen Recording 2024-09-13 at 1.03.26 PM.mov" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+         
+        </div>
+        
+        <!-- Add more slides as needed -->
+      </div>
+
+      <!-- Pagination -->
+      <div class="swiper-pagination"></div>
+
+      <!-- Navigation buttons -->
+      <div class="swiper-button-next" aria-label="Next slide"></div>
+      <div class="swiper-button-prev" aria-label="Previous slide"></div>
+    </div>
+  </div>
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <script>
+      var swiper = new Swiper('.unique-swiper-container', {
+        effect: 'coverflow',
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: 'auto',
+        coverflowEffect: {
+          rotate: 20,
+          stretch: 0,
+          depth: 350,
+          modifier: 1,
+          slideShadows: true,
+        },
+        pagination: {
+          el: '.swiper-pagination',
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        on: {
+          slideChange: function () {
+            // Pause all videos
+            document.querySelectorAll('.unique-slide-picture video').forEach(video => {
+              video.pause();
+              video.currentTime = 0; // Reset the video to the start
+            });
+
+            // Play the video in the active slide
+            const activeSlideVideo = this.slides[this.activeIndex].querySelector('video');
+            if (activeSlideVideo) {
+              activeSlideVideo.play();
+            }
+          },
+          slideChangeTransitionEnd: function () {
+            // Ensure the video is muted when it starts
+            const activeSlideVideo = this.slides[this.activeIndex].querySelector('video');
+            if (activeSlideVideo) {
+              activeSlideVideo.muted = true;
+            }
+          }
+        }
+      });
+
+      // Ensure the first video starts playing on load
+      const initialVideo = document.querySelector('.swiper-container .swiper-slide-active video');
+      if (initialVideo) {
+        initialVideo.play();
+      }
+    </script>
+  </body>
+  </html>
