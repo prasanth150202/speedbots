@@ -1,3 +1,18 @@
+
+
+.glow-icon {
+    width: 100%; /* Ensuring it takes the full width */
+    position: relative;
+    filter: drop-shadow(0 0 15px rgba(6, 87, 153, 0.8)); /* Greenish glow around the image */
+  }
+  
+  .glow-icon:hover {
+    filter: drop-shadow(0 0 25px rgb(205, 225, 228)); /* Brighter glow on hover */
+  }
+  
+  .img-fluid{
+    width: 50px;
+  }
 body{
   overflow-x: hidden; /* Hide horizontal scrollbar */
 }
@@ -16,7 +31,7 @@ body{
     overflow:hidden;
 }
 
-body{
+h1, h2, h3 ,h4, h5 ,h6 ,p {
     font-family: 'Poppins', sans-serif;
 }
 
@@ -710,13 +725,34 @@ min-height: 300px;
 }
 
 #video-player4 {
-width:700px;           /* Make the video width 100% of its container */
+width:300px;           /* Make the video width 100% of its container */
 height: auto;      
-max-height: 700px;     /* Maintain aspect ratio */
-max-width: 700px;       /* Optional: Set a max width for the video */
-border: 2px solid #ddd; /* Add a border for styling */
-border-radius: 10px;    /* Add rounded corners */
+max-height: 600px;
+min-height: 600px;     /* Maintain aspect ratio */
+max-width: 300px;       /* Optional: Set a max width for the video */
+    border-radius: 10px;    /* Add rounded corners */
 object-fit: cover;      /* Ensure the video fills the container without distortion */
+}
+
+@media (max-width:780px) {
+    #video-player4 {
+        width:300px;           /* Make the video width 100% of its container */
+        height: auto;      
+        max-height: 600px; 
+        min-height: 600px; 
+        min-width: 100%;       /* Maintain aspect ratio */
+        max-width: 300px;       /* Optional: Set a max width for the video */
+            border-radius: 10px;    /* Add rounded corners */
+        object-fit: cover;      /* Ensure the video fills the container without distortion */
+        }
+        #video-player4 {
+            width:200px;           /* Make the video width 100% of its container */
+            height: auto;      
+            max-height: 600px;     /* Maintain aspect ratio */
+            max-width: 200px;       /* Optional: Set a max width for the video */
+                border-radius: 10px;    /* Add rounded corners */
+            object-fit: cover;      /* Ensure the video fills the container without distortion */
+            }
 }
 
 .button-container4 {
@@ -755,8 +791,9 @@ color: #0c0c0c; /* Highlighted text color */
 background-color:#f0f2f6; /* Highlighted background color */
 transform: scale(1.1);
 z-index: 10;
-width: 250px;
+width: 230px;
 max-width: 250px;
+margin-bottom: 10px;
 border:1px solid black;     /* Remove border */
 
 }
