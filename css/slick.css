@@ -1,5 +1,22 @@
+.glow-text {
+    color: #fff; /* Text color */
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
+                 0 0 20px rgba(255, 255, 255, 0.5),
+                 0 0 30px rgba(255, 255, 255, 0.3),
+                 0 0 40px rgba(255, 255, 255, 0.2);
+    
+}
 
 
+.bannerimage{
+    margin: -150px 0;
+}
+
+@media (max-width:780px) {
+    .bannerimage{
+        margin: -10px;
+    }
+}
 .glow-icon {
     width: 100%; /* Ensuring it takes the full width */
     position: relative;
@@ -13,16 +30,48 @@
   .img-fluid{
     width: 50px;
   }
+  .glow-icon1 {
+    width: 100%; /* Ensuring it takes the full width */
+    position: relative;
+    filter: drop-shadow(0 0 30px rgba(0, 15, 151, 0.8)); /* Greenish glow around the image */
+  }
+  
+  .glow-icon1hover {
+    filter: drop-shadow(0 0 25px rgb(85, 84, 84)); /* Brighter glow on hover */
+  }
+  
+  .img-fluid{
+    width: 50px;
+  }
 body{
   overflow-x: hidden; /* Hide horizontal scrollbar */
 }
-.header1{
+
+header{
+    height: 100px;
+}
+.header1 {
     position: sticky;
     top: 0;
-    
     background-color: white;
-    z-index: 10000; height: 170px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    z-index: 10000;
+    height: 120px;
+    transition: box-shadow 0.3s ease-in-out; /* Smooth transition */
+}
+
+.header1.scrolled {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box-shadow when scrolled */
+}
+
+
+
+@media (max-width:780px) {
+    .header1{
+       
+       height: 150px;
+    }
+    
+    
 }
 
 
@@ -156,7 +205,7 @@ h1, h2, h3 ,h4, h5 ,h6 ,p {
 
 /* Mobile adjustments */
 /* Mobile adjustments */
-@media (max-width: 768px) {
+@media (max-width: 488px) {
     .tpheader__right {
         display: flex;
         flex-direction: column; /* Stack items vertically */
@@ -220,6 +269,7 @@ h1, h2, h3 ,h4, h5 ,h6 ,p {
     overflow: hidden;
     position: relative;
     width: 100%;
+    margin-bottom: 30px;
 }
 .slider3 img{
     
